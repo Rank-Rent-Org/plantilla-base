@@ -4,7 +4,7 @@ export interface SiteConfig {
     whatsapp: string; whatsapp_mensaje: string; email: string
     ciudad_principal: string; provincia: string; pais: string
     nicho_singular: string; servicios_realizados: number
-    anos_experiencia: string; tiempo_respuesta: string
+    anos_experiencia: string | number; tiempo_respuesta: string
     horario: { semana: { abre: string; cierra: string }; sabado?: { abre: string; cierra: string } }
     direccion: { cp: string }
     coordenadas: { lat: number; lon: number }
