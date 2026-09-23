@@ -93,10 +93,10 @@ export default async function CiudadServicioPage({
   const faqSchema = buildFaqSchema(faqs.slice(0, 3))
 
   // Other services for internal linking
-  const otrosServicios = config.servicios.filter((s) => s.slug !== servicioSlug)
+  const otrosServicios = config.servicios.filter((s: { slug: string }) => s.slug !== servicioSlug)
 
   // Other cities for internal linking
-  const otrasCiudades = config.ciudades.filter((c) => c.slug !== ciudadSlug)
+  const otrasCiudades = config.ciudades.filter((c: { slug: string }) => c.slug !== ciudadSlug)
 
   return (
     <>
@@ -145,7 +145,7 @@ export default async function CiudadServicioPage({
                 <PhoneIcon />
                 {negocio.telefono_display}
               </a>
-              <a
+              
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -336,7 +336,7 @@ export default async function CiudadServicioPage({
               <PhoneIcon />
               {negocio.telefono_display}
             </a>
-            <a
+            
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
