@@ -145,7 +145,7 @@ export default async function CiudadServicioPage({
                 <PhoneIcon />
                 {negocio.telefono_display}
               </a>
-              
+              <a
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -209,7 +209,7 @@ export default async function CiudadServicioPage({
                     Barrios y zonas donde trabajamos en {ciudad.nombre}:
                   </p>
                   <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    {ciudad.barrios_destacados.map((barrio) => (
+                    {ciudad.barrios_destacados.map((barrio: string) => (
                       <li
                         key={barrio}
                         style={{
@@ -229,7 +229,7 @@ export default async function CiudadServicioPage({
 
             {/* Garantías en la página de ciudad */}
             <ul className="garantias-list" role="list">
-              {garantias.map((g, i) => (
+              {garantias.map((g: string, i: number) => (
                 <li key={i} className="garantia-item">
                   <CheckIcon className="garantia-check" />
                   <span className="garantia-text">{g}</span>
@@ -249,7 +249,7 @@ export default async function CiudadServicioPage({
             </h2>
           </div>
           <div className="faq-list">
-            {faqs.map((faq, i) => (
+            {faqs.map((faq: { pregunta: string; respuesta: string }, i: number) => (
               <div key={i} className="faq-item">
                 <p className="faq-question">
                   {faq.pregunta.replace('Valencia', ciudad.nombre)}
@@ -336,7 +336,7 @@ export default async function CiudadServicioPage({
               <PhoneIcon />
               {negocio.telefono_display}
             </a>
-            
+            <a
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
