@@ -2,7 +2,7 @@ import type { SiteConfig, Ciudad, Servicio } from '@/types/config'
 import rawConfig from '@/config/site.config.json'
 
 // Cast once at the boundary. All consumers get full types.
-export const config: SiteConfig = rawConfig as SiteConfig
+export const config: SiteConfig = rawConfig as unknown as SiteConfig
 
 // ─── Convenience accessors ──────────────────────────────────────────────────
 
