@@ -11,7 +11,17 @@ export interface SiteConfig {
   }
   seo: { home: { title: string; meta_desc: string; h1: string } }
   schema: { type: string; price_range: string; same_as: string[] }
-  diseno: { logo_url: string; [key: string]: unknown }
+  diseno: {
+    logo_url: string
+    color_primario: string
+    color_acento: string
+    color_fondo: string         
+    color_superficie: string     
+    color_borde: string          
+    color_texto: string           
+    color_texto_suave: string     
+    color_acento_hover: string 
+  }
   servicios: Servicio[]
   ciudades: Ciudad[]
   faqs: { pregunta: string; respuesta: string }[]
